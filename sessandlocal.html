@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1 style="text-align: center;">LOGIN FORM</h1>
+    
+        <input type ="text" name="fname" placeholder="enter name" id="in1"><br>
+        <br>
+        <input type = "password" name="pwor" placeholder="enter password" id="in2">
+        <br><br>
+        <input type ="email" name="mail" placeholder="enter email" id="in3"><br>
+<br>
+        <button onclick=SUBMIT()>SUBMIT</button>  
+
+        </center>
+</body>
+<script>
+
+
+
+    localStorage.setItem('NAME','AJAY')
+    console.log(localStorage.getItem('NAME'));
+
+    localStorage.setItem('PASSWORD','password')
+    console.log(localStorage.getItem('  PASSWORD'));
+
+    localStorage.setItem('email','ajay.9@')
+    console.log(localStorage.getItem('email'));
+
+
+    
+    function SUBMIT(){
+        var inp1 = document.getElementById("in1")
+    console.log(inp1);
+
+    var inp2 = document.getElementById("in2")
+    console.log(inp2);
+
+    var inp3 = document.getElementById("in3")
+    console.log(inp3);
+    
+    storage1 =   localStorage.getItem('NAME');
+    storage2 =   localStorage.getItem('PASSWORD');
+    storage3 =   localStorage.getItem('email');
+
+
+if(inp1.value == storage1 && inp2.value == storage2){
+    if(inp3.value == storage3){
+        alert("LOGIN SUCCESSFULL") 
+    }
+alert("LOGIN SUCCESSFULL")
+}
+else{
+    alert("LOGIN NOT SUCCESSFULL")
+}
+    
+ location.assign("./page2.html")
+    }
+    //clear() => total storage will delete
+    //removeItem()=> removes the item by key name
+</script>
+</html>
